@@ -2,7 +2,7 @@ import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 import { FaUsers, FaHeart, FaStar } from "react-icons/fa";
-
+import { TiWeatherPartlySunny } from "react-icons/ti";
 const SingleTouristCard = ({ tourist }) => {
   const {
     average_cost,
@@ -14,6 +14,7 @@ const SingleTouristCard = ({ tourist }) => {
     total_visitors_per_year,
     travel_time,
     tourists_spot_name,
+    seasonality,
   } = tourist;
   return (
     <div className="rounded-lg bg-gray-100">
@@ -39,21 +40,27 @@ const SingleTouristCard = ({ tourist }) => {
             {location} , {country_name}
           </p>
         </div>
-        <h3 className="py-3 capitalize font-semibold">{tourists_spot_name}</h3>
-        <div className="flex gap-2 items-center bg-white rounded-lg py-2 px-5">
-          <div className="flex gap-2 items-center w-1/2">
+        <h3 className="py-3 capitalize font-semibold pl-1">
+          {tourists_spot_name}
+        </h3>
+        <div className="flex gap-2 items-center bg-white rounded-lg py-2 px-5 justify-between">
+          <div className="flex gap-2 items-center">
             <FaRegClock size={18} />
-            <p>{travel_time}</p>
+            <p>{travel_time} days</p>
           </div>
-          <div className="flex gap-2 items-center w-1/2">
+          <div className="flex gap-2 items-center">
             <FaUsers size={20} />
             <p>{total_visitors_per_year}</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <TiWeatherPartlySunny size={20} />
+            <p>{seasonality}</p>
           </div>
         </div>
         <div className="py-3 flex items-center   px-2">
           <div className="flex space-x-1 w-1/2">
             <p>From:</p>
-            <p className="font-bold">{average_cost}</p>
+            <p className="font-bold">${average_cost}</p>
           </div>
           <div className="flex gap-2 w-1/2">
             <FaStar size={20} className="text-yellow-500" />

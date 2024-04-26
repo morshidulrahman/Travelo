@@ -28,7 +28,7 @@ function Navbar() {
       </li>
       <li>
         <NavLink
-          to="/alltourists"
+          to="/alltorist"
           className={({ isActive }) =>
             isActive ? " text-xl font-[600]   py-3  text-[#F26f55]" : "text-xl"
           }
@@ -38,7 +38,7 @@ function Navbar() {
       </li>
       <li>
         <NavLink
-          to="/addtourists"
+          to="/addtourist"
           className={({ isActive }) =>
             isActive ? " text-xl font-[600]   py-3  text-[#F26f55]" : "text-xl"
           }
@@ -78,12 +78,12 @@ function Navbar() {
               className={` ${
                 toggle
                   ? "flex  fixed top-0 right-0 w-48 bg-slate-100 dark:bg-gray-800 h-full flex-col justify-center items-center z-50 gap-2"
-                  : "md:flex items-center hidden md:space-x-4 lg:space-x-7"
+                  : "lg:flex items-center hidden md:space-x-4 lg:space-x-7"
               }`}
             >
               {navitems}
               <span
-                className="md:hidden absolute top-3 right-[155px] dark:text-white"
+                className="lg:hidden absolute top-3 right-[155px] dark:text-white"
                 onClick={() => settoggle(false)}
               >
                 <GrFormClose
@@ -134,7 +134,7 @@ function Navbar() {
             </div>
 
             <span
-              className=" md:hidden block dark:text-white"
+              className="lg:hidden block dark:text-white"
               onClick={() => settoggle(true)}
             >
               <AiOutlineMenu size={22} />

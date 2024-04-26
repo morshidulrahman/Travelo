@@ -21,7 +21,7 @@ const Touristspot = () => {
       <div className="pt-16">
         <div className="grid grid-cols-3 gap-6">
           {tourist &&
-            tourist.map((tourist, ind) => (
+            tourist.slice(0, 6).map((tourist, ind) => (
               <Fade
                 delay={ind * 150}
                 cascade={false}
