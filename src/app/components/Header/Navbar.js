@@ -93,7 +93,7 @@ function Navbar() {
               </span>
             </ul>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center md:space-x-4 space-x-2">
             <div className="pr-3" onClick={() => setTheme(nextTheme)}>
               {nextTheme === "dark" ? (
                 <BsMoonFill size={20} />
@@ -103,7 +103,7 @@ function Navbar() {
             </div>
             <div className="relative">
               {!user ? (
-                <div className="flex gap-4">
+                <div className="flex md:gap-4 gap-2">
                   <Link to="/login">
                     <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55]">
                       Login
