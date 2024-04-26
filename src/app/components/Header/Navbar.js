@@ -4,7 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { GrFormClose } from "react-icons/gr";
 import useTheme from "../../hook/useTheme";
 import { BiSun } from "react-icons/bi";
-import { BsMoonFill } from "react-icons/bs";
+import { BsMoonStarsFill } from "react-icons/bs";
 import { UserAuth } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -20,7 +20,7 @@ function Navbar() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
+            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-xl"
           }
         >
           Home
@@ -30,7 +30,7 @@ function Navbar() {
         <NavLink
           to="/alltourists"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
+            isActive ? " text-xl font-[600]   py-3  text-[#F26f55]" : "text-xl"
           }
         >
           All Tourists Spot
@@ -40,7 +40,7 @@ function Navbar() {
         <NavLink
           to="/addtourists"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
+            isActive ? " text-xl font-[600]   py-3  text-[#F26f55]" : "text-xl"
           }
         >
           Add Tourists Spot
@@ -50,7 +50,7 @@ function Navbar() {
         <NavLink
           to="/mylist"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
+            isActive ? " text-xl font-[600]   py-3  text-[#F26f55]" : "text-xl"
           }
         >
           My List
@@ -78,7 +78,7 @@ function Navbar() {
               className={` ${
                 toggle
                   ? "flex  fixed top-0 right-0 w-48 bg-slate-100 dark:bg-gray-800 h-full flex-col justify-center items-center z-50 gap-2"
-                  : "md:flex items-center hidden space-x-7"
+                  : "md:flex items-center hidden md:space-x-4 lg:space-x-7"
               }`}
             >
               {navitems}
@@ -94,11 +94,11 @@ function Navbar() {
             </ul>
           </div>
           <div className="flex items-center md:space-x-4 space-x-2">
-            <div className="pr-3" onClick={() => setTheme(nextTheme)}>
+            <div className="" onClick={() => setTheme(nextTheme)}>
               {nextTheme === "dark" ? (
-                <BsMoonFill size={20} />
+                <BsMoonStarsFill size={23} />
               ) : (
-                <BiSun size={20} />
+                <BiSun size={23} />
               )}
             </div>
             <div className="relative">
