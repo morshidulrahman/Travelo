@@ -1,0 +1,99 @@
+[
+    {
+        "image_url": "https://example.com/bali.jpg",
+        "tourists_spot_name": "Bali",
+        "country_name": "Indonesia",
+        "location": "Bali",
+        "short_description": "Bali is an Indonesian island known for its forested volcanic mountains...",
+        "average_cost": "$300",
+        "seasonality": "Year-round",
+        "travel_time": "7 days",
+        "total_visitors_per_year": 800000,
+        "rating": 4.7,
+        "reviews_number": 300,
+        "email": "user@example.com",
+        "name": "Alice Smith"
+    },
+     {
+            "image_url": "https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg",
+            "tourists_spot_name": "Bangkok",
+            "country_name": "Thailand",
+            "location": "Bangkok",
+            "short_description": "Bangkok is the capital and most populous city...",
+            "average_cost": "$150",
+            "seasonality": "Year-round",
+            "travel_time": "3 days",
+            "total_visitors_per_year": 1000000,
+            "rating": 4.2,
+            "reviews_number": 400,
+            "email": "user@example.com",
+            "name": "Jane Doe"
+        },
+  
+      {
+            "image_url": "https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg",
+            "tourists_spot_name": "Bali",
+            "country_name": "Indonesia",
+            "location": "Bali",
+            "short_description": "Bali is an Indonesian island known for its forested volcanic mountains...",
+            "average_cost": "$300",
+            "seasonality": "Year-round",
+            "travel_time": "7 days",
+            "total_visitors_per_year": 800000,
+            "rating": 4.5,
+            "reviews_number": 250,
+            "email": "user@example.com",
+            "name": "Alice Smith"
+        
+    },
+  {
+            "image_url": "https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg",
+            "tourists_spot_name": "Kuala Lumpur",
+            "country_name": "Malaysia",
+            "location": "Kuala Lumpur",
+            "short_description": "Kuala Lumpur is the capital of Malaysia...",
+            "average_cost": "$250",
+            "seasonality": "Year-round",
+            "travel_time": "4 days",
+            "total_visitors_per_year": 700000,
+            "rating": 4.0,
+            "reviews_number": 150,
+            "email": "user@example.com",
+            "name": "Bob Johnson"
+        
+    },
+    {
+       
+            "image_url": "https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg",
+            "tourists_spot_name": "Ha Long Bay",
+            "country_name": "Vietnam",
+            "location": "Ha Long Bay",
+            "short_description": "Ha Long Bay is a UNESCO World Heritage Site...",
+            "average_cost": "$180",
+            "seasonality": "Year-round",
+            "travel_time": "2 days",
+            "total_visitors_per_year": 600000,
+            "rating": 4.8,
+            "reviews_number": 200,
+            "email": "user@example.com",
+            "name": "Emma Watson"
+        
+    },
+    {
+        
+            "image_url": "https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg",
+            "tourists_spot_name": "Angkor Wat",
+            "country_name": "Cambodia",
+            "location": "Siem Reap",
+            "short_description": "Angkor Wat is a temple complex in Cambodia...",
+            "average_cost": "$120",
+            "seasonality": "Year-round",
+            "travel_time": "3 days",
+            "total_visitors_per_year": 400000,
+            "rating": 4.3,
+            "reviews_number": 180,
+            "email": "user@example.com",
+            "name": "Chris Evans"
+        
+    }
+]
