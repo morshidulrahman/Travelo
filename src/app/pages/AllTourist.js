@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 const AllTourist = () => {
   const [tourist, setTourist] = useState([]);
-
+  const [value, setvalue] = useState("ascending");
   useEffect(() => {
     const fetchdata = async () => {
       const res = await fetch("./tourist.json");
@@ -13,6 +13,14 @@ const AllTourist = () => {
     };
     fetchdata();
   }, []);
+  //  filtering data
+  useEffect(() => {
+    if (value === "ascending") {
+      setTourist(tourist.sort((a, b) => a.average_cost - b.average_cost));
+    } else if (value === "descending") {
+      setTourist(tourist.sort((a, b) => b.average_cost - a.average_cost));
+    }
+  }, [value, tourist]);
 
   return (
     <div className="container mx-auto px-4 rounded-lg py-5">
@@ -24,8 +32,8 @@ const AllTourist = () => {
       </div>
       <div className="flex justify-center items-center py-14">
         <select
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
-          name="seasonality"
+          className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 text-base font-semibold"
+          onChange={(e) => setvalue(e.target.value)}
         >
           <option value="ascending">ascending </option>
           <option value="descending">descending </option>
