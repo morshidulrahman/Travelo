@@ -19,7 +19,7 @@ function Navbar() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F27056]" : "text-lg"
+            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
           }
         >
           Home
@@ -29,7 +29,7 @@ function Navbar() {
         <NavLink
           to="/alltourists"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F27056]" : "text-lg"
+            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
           }
         >
           All Tourists Spot
@@ -39,7 +39,7 @@ function Navbar() {
         <NavLink
           to="/addtourists"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F27056]" : "text-lg"
+            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
           }
         >
           Add Tourists Spot
@@ -49,7 +49,7 @@ function Navbar() {
         <NavLink
           to="/mylist"
           className={({ isActive }) =>
-            isActive ? " text-lg font-[600]   py-3  text-[#F27056]" : "text-lg"
+            isActive ? " text-lg font-[600]   py-3  text-[#F26f55]" : "text-lg"
           }
         >
           My List
@@ -82,7 +82,7 @@ function Navbar() {
               >
                 <GrFormClose
                   size={23}
-                  className="dark:bg-white rounded-full "
+                  className="dark:bg-white rounded-full text-gray-800"
                 />
               </span>
             </ul>
@@ -99,12 +99,12 @@ function Navbar() {
               {!user ? (
                 <div className="flex gap-4">
                   <Link to="/login">
-                    <button className="bg-[#F27056] text-white px-4 py-2 rounded-md ">
+                    <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md ">
                       Login
                     </button>
                   </Link>
                   <Link to="/login">
-                    <button className="bg-[#F27056] text-white px-4 py-2 rounded-md ">
+                    <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md ">
                       Register
                     </button>
                   </Link>
