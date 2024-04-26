@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { GrFormClose } from "react-icons/gr";
 import useTheme from "../../hook/useTheme";
 import { BiSun } from "react-icons/bi";
 import { BsMoonFill } from "react-icons/bs";
+import { UserAuth } from "../../context/AuthProvider";
+import toast from "react-hot-toast";
 
 function Navbar() {
   const [toggle, settoggle] = useState(false);
 
-  const [Toggle, setToggle] = useState(false);
   const [nextTheme, setTheme] = useTheme();
-  const user = null;
+  const { user, LogOut } = useContext(UserAuth);
 
   const navitems = (
     <>
@@ -58,8 +59,13 @@ function Navbar() {
     </>
   );
 
+  const handleLogout = () => {
+    LogOut();
+    toast.success("Logged out successfully");
+  };
+
   return (
-    <nav className="w-full border-b dark:bg-gray-800 dark:text-white bg-white dark:border-b-gray-700">
+    <nav className="w-full border-b dark:bg-gray-900 dark:text-white bg-white dark:border-b-gray-700">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-5">
           <div className="flex space-x-2">
@@ -99,12 +105,12 @@ function Navbar() {
               {!user ? (
                 <div className="flex gap-4">
                   <Link to="/login">
-                    <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md ">
+                    <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55]">
                       Login
                     </button>
                   </Link>
-                  <Link to="/login">
-                    <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md ">
+                  <Link to="/register">
+                    <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55]">
                       Register
                     </button>
                   </Link>
@@ -112,17 +118,15 @@ function Navbar() {
               ) : (
                 <div className="flex gap-4 items-center">
                   <img
-                    onClick={() => setToggle(!Toggle)}
-                    src={
-                      user && user.photoURL
-                        ? user.photoURL
-                        : "https://i.ibb.co/3cXqr9P/profile1.png"
-                    }
-                    alt="user-logo"
-                    className="w-10 h-10 rounded-full object-cover bg-gray-800 p-1 border"
-                    loading="lazy"
+                    data-tooltip-id="my-tooltip"
+                    src={user?.photoURL}
+                    alt="me"
+                    className="h-10 w-10 rounded-full p-1 bg-black"
                   />
-                  <button className="bg-gray-700 text-white px-4 py-2 rounded-md ">
+                  <button
+                    onClick={handleLogout}
+                    className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55] "
+                  >
                     Logout
                   </button>
                 </div>

@@ -43,8 +43,8 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="flex items-center justify-center py-10">
+    <div className="dark:bg-gray-900">
+      <div className="flex items-center justify-center py-10 ">
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-100  ">
           <h1 className="text-2xl font-bold text-center">Login</h1>
           <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -53,7 +53,7 @@ const Login = () => {
                 Email
               </label>
               <input
-                type="mail"
+                type="email"
                 className="w-full px-4 py-3 rounded-lg bg-gray-50 outline-none"
                 defaultValue=""
                 placeholder="abc@example.com"
@@ -124,7 +124,7 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
