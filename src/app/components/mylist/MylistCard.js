@@ -8,7 +8,7 @@ const MylistCard = ({ item, setmylist, mylist }) => {
   const handledelete = () => {
     Swal.fire({
       title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      text: "You want to delete this tourists spot",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -51,7 +51,7 @@ const MylistCard = ({ item, setmylist, mylist }) => {
       <td className="px-6 py-4">${item.average_cost}</td>
       <td className="px-6 py-4 flex gap-2">
         <Link
-          to="/"
+          to={`/edit/${item._id}`}
           className="font-medium bg-orange-600 text-white rounded-md
       px-3 py-2"
         >

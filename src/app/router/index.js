@@ -8,6 +8,7 @@ import AllTourist from "../pages/AllTourist";
 import MyList from "../pages/MyList";
 import PrivateRoute from "./PrivateRoute";
 import TouristDetails from "../pages/TouristDetails";
+import UpdateTourists from "../pages/UpdateTourists";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyList />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/edit/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateTourists />
           </PrivateRoute>
         ),
       },

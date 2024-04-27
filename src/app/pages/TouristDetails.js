@@ -7,6 +7,7 @@ const TouristDetails = () => {
   const [tourist, setTourist] = useState("");
   const [loading, setloading] = useState(false);
   const { id } = useParams();
+
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
@@ -33,6 +34,10 @@ const TouristDetails = () => {
     reviews_number,
     rating,
   } = tourist;
+
+  if (loading) {
+    return <h1>loading...</h1>;
+  }
 
   return (
     <div>

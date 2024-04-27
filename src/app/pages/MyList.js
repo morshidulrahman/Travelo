@@ -7,10 +7,10 @@ import MylistCard from "../components/mylist/MylistCard";
 const MyList = () => {
   const { user } = useContext(UserAuth);
   const [mylist, setmylist] = useState([]);
-
+  const [loading, setloading] = useState(false);
   useEffect(() => {
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/travels/${user.email}`);
+      const res = await fetch(`http://localhost:5000/mylist/${user.email}`);
       const data = await res.json();
       setmylist(data);
       setloading(false);
@@ -47,7 +47,12 @@ const MyList = () => {
             </thead>
             <tbody>
               {mylist.map((item) => (
-                <MylistCard item={item} mylist={mylist} setmylist={setmylist} />
+                <MylistCard
+                  item={item}
+                  mylist={mylist}
+                  setmylist={setmylist}
+                  key={item._id}
+                />
               ))}
             </tbody>
           </table>
