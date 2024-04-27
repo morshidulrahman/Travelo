@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
-import SingleTouristCard from "../components/Tourist/SingleTouristCard";
-import { Fade } from "react-awesome-reveal";
-import { useParams } from "react-router-dom";
+
+import { Link, useParams } from "react-router-dom";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { TiWeatherPartlySunny } from "react-icons/ti";
+import { MdAttachMoney } from "react-icons/md";
+import CourtryCard from "../components/countries/CourtryCard";
 
 const AllCourty = () => {
   const [country, setcountry] = useState();
@@ -30,15 +33,7 @@ const AllCourty = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1">
           {country &&
             country.map((tourist, ind) => (
-              <Fade
-                delay={ind * 150}
-                cascade={false}
-                direction="up"
-                triggerOnce={true}
-                key={ind}
-              >
-                <SingleTouristCard tourist={tourist} />
-              </Fade>
+              <CourtryCard country={tourist} key={ind} />
             ))}
         </div>
       </div>

@@ -26,9 +26,9 @@ const Country = () => {
       <h1 className="text-4xl font-extrabold text-center capitalize dark:text-white pb-16">
         Countries
       </h1>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-5">
         {country &&
-          country.map((country, ind) => (
+          country.slice(0, 6).map((country, ind) => (
             <Fade
               delay={ind * 150}
               cascade={false}
