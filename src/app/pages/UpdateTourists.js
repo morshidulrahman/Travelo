@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import Loader from "../components/loader/Loader";
 
 const UpdateTourists = () => {
   const { id } = useParams();
@@ -77,7 +78,7 @@ const UpdateTourists = () => {
   };
 
   if (loading) {
-    return <h1>loading............</h1>;
+    return <Loader />;
   }
 
   return (

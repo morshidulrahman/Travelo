@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaRegClock, FaStar, FaUsers } from "react-icons/fa";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { useParams } from "react-router-dom";
+import Loader from "../components/loader/Loader";
 
 const TouristDetails = () => {
   const [tourist, setTourist] = useState("");
@@ -36,7 +37,7 @@ const TouristDetails = () => {
   } = tourist;
 
   if (loading) {
-    return <h1>loading...</h1>;
+    return <Loader />;
   }
 
   return (

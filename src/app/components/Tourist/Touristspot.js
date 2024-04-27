@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SingleTouristCard from "./SingleTouristCard";
 import { Fade } from "react-awesome-reveal";
+import Loader from "../loader/Loader";
 const Touristspot = () => {
   const [tourist, setTourist] = useState();
   const [loading, setloading] = useState(false);
@@ -16,7 +17,7 @@ const Touristspot = () => {
   }, []);
 
   if (loading) {
-    return <h1>loading..........</h1>;
+    return <Loader />;
   }
   return (
     <div className="py-10 container mx-auto px-4">

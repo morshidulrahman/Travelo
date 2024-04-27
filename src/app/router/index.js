@@ -9,6 +9,7 @@ import MyList from "../pages/MyList";
 import PrivateRoute from "./PrivateRoute";
 import TouristDetails from "../pages/TouristDetails";
 import UpdateTourists from "../pages/UpdateTourists";
+import AllCourty from "../pages/AllCourty";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/alltorist",
         element: <AllTourist />,
+      },
+      {
+        path: "/allcountry/:country",
+        element: <AllCourty />,
       },
       {
         path: "/addtourist",
