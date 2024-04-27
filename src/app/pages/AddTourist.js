@@ -54,7 +54,7 @@ const AddTourist = () => {
 
   return (
     <div className="flex justify-center items-center py-16">
-      <div className="md:w-[70%] lg:w-[60%] w-[90%] rounded-md bg-gray-200 p-5">
+      <div className="md:w-[70%] lg:w-[60%] w-[90%] rounded-md bg-gray-200 p-8">
         <h1 className="text-xl font-bold text-center py-5">
           Add Tourists spot
         </h1>
