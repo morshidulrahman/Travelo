@@ -6,6 +6,7 @@ const AllTourist = () => {
   const [tourist, setTourist] = useState([]);
   const [value, setvalue] = useState("ascending");
   const [loading, setloading] = useState(false);
+
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
@@ -24,9 +25,11 @@ const AllTourist = () => {
       setTourist(tourist.sort((a, b) => b.average_cost - a.average_cost));
     }
   }, [value, tourist]);
+
   if (loading) {
     return <h1>loading............</h1>;
   }
+
   return (
     <div className="container mx-auto px-4 rounded-lg py-5">
       <div className="bg-[url('https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg')] h-[300px] w-full flex justify-center items-center relative rounded-lg">
@@ -47,7 +50,7 @@ const AllTourist = () => {
       <div className=" container mx-auto px-4">
         <div className="grid grid-cols-3 gap-8">
           {tourist &&
-            tourist.slice(0, 6).map((tourist, ind) => (
+            tourist.map((tourist, ind) => (
               <Fade
                 delay={ind * 150}
                 cascade={false}

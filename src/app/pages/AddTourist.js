@@ -1,4 +1,5 @@
 import React from "react";
+import toast from "react-hot-toast";
 
 const AddTourist = () => {
   const handleSubmit = (e) => {
@@ -17,7 +18,8 @@ const AddTourist = () => {
     const tourists_spot_name = form.spot_name.value;
     const review = form.review.value;
     const rating = form.rating.value;
-    c;
+    const image_url = form.Photo_url.value;
+
     const Touristinfo = {
       name,
       seasonality,
@@ -34,7 +36,20 @@ const AddTourist = () => {
       rating,
     };
 
-    console.log(Touristinfo);
+    fetch("http://localhost:5000/travels", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(Touristinfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.insertedId) {
+          toast.success("tourists added successfully");
+        }
+        form.reset();
+      });
   };
 
   return (
