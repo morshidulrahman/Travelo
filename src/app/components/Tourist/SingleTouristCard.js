@@ -14,6 +14,7 @@ const SingleTouristCard = ({ tourist }) => {
     reviews_number,
     total_visitors_per_year,
     travel_time,
+    image_url,
     tourists_spot_name,
     seasonality,
   } = tourist;
@@ -22,8 +23,8 @@ const SingleTouristCard = ({ tourist }) => {
     <div className="rounded-lg bg-gray-100">
       <div className="overflow-hidden h-[250px] w-full rounded-t-lg relative">
         <img
-          src="https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg"
-          alt="jl"
+          src={image_url}
+          alt={tourists_spot_name}
           className="w-full h-full duration-300 hover:scale-105 transition-all"
         />
         <div className="absolute bottom-3 left-4 flex gap-3">
@@ -45,7 +46,7 @@ const SingleTouristCard = ({ tourist }) => {
         <h3 className="py-3 capitalize font-semibold pl-1">
           {tourists_spot_name}
         </h3>
-        <div className="flex gap-2 items-center bg-white rounded-lg py-2 px-5 justify-between">
+        <div className="flex gap-2 items-center bg-white rounded-lg py-2 px-5 justify-between flex-wrap">
           <div className="flex gap-2 items-center">
             <FaRegClock size={18} />
             <p>{travel_time} days</p>
@@ -59,12 +60,12 @@ const SingleTouristCard = ({ tourist }) => {
             <p>{seasonality}</p>
           </div>
         </div>
-        <div className="py-3 flex items-center   px-2">
+        <div className="py-3 flex items-centerpx-2">
           <div className="flex space-x-1 w-1/2">
             <p>From:</p>
             <p className="font-bold">${average_cost}</p>
           </div>
-          <div className="flex gap-2 w-1/2">
+          <div className="flex gap-2 lg:w-1/2 md:w-[70%]">
             <FaStar size={20} className="text-yellow-500" />
             <p>
               {rating} ({reviews_number} reviews)

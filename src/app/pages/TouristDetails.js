@@ -42,15 +42,15 @@ const TouristDetails = () => {
         </h1>
         <div className="bg-black w-full absolute top-0 left-0 h-full opacity-20"></div>
       </div>
-      <div className="flex gap-6 py-16 container mx-auto px-4 justify-between">
-        <div className="w-[48%] h-[400px]">
+      <div className="flex gap-6 py-16 container mx-auto px-4 justify-between lg:flex-row flex-col">
+        <div className="w-full lg:w-[48%] h-[400px]">
           <img
-            src="https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg"
-            alt="image"
+            src={image_url}
+            alt={tourists_spot_name}
             className="w-full h-full object-cover rounded-md"
           />
         </div>
-        <div className="w-[48%] bg-gray-100 px-5 py-3 rounded-md">
+        <div className="w-full lg:w-[48%] bg-gray-100 px-5 py-3 rounded-md">
           <div className="flex gap-2 items-center text-[#017b6e] text-xl py-2">
             <span>
               <FaMapMarkerAlt size={20} />

@@ -9,20 +9,30 @@ body{
 }
 
 .banner_image{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/banner4.avif');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/QXTvJZ7/banner4.jpg');
     object-fit: contain;
     background-repeat: no-repeat;
     background-position: top center;
 }
 .banner_image2{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/banner2.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/HxK3nT5/banner2.jpg');
     object-fit: contain;
     background-repeat: no-repeat;
     background-position: top center;
 }
 .banner_image3{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/banner3.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/n3q9wtk/pxfuel.jpg');
     object-fit: contain;
     background-repeat: no-repeat;
     background-position: top center;
+}
+
+.footer_image{
+    background-image: linear-gradient(to bottom, rgba(6, 7, 9, 0.5), rgba(14, 14, 20, 0.743)), url('https://i.ibb.co/HrCsZdq/para-08.jpg');
+ 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1
+    ;
 }
