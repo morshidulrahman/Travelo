@@ -5,11 +5,14 @@ import { Fade } from "react-awesome-reveal";
 const AllTourist = () => {
   const [tourist, setTourist] = useState([]);
   const [value, setvalue] = useState("ascending");
+  const [loading, setloading] = useState(false);
   useEffect(() => {
+    setloading(true);
     const fetchdata = async () => {
-      const res = await fetch("./tourist.json");
+      const res = await fetch("http://localhost:5000/travels");
       const data = await res.json();
       setTourist(data);
+      setloading(false);
     };
     fetchdata();
   }, []);
@@ -21,7 +24,9 @@ const AllTourist = () => {
       setTourist(tourist.sort((a, b) => b.average_cost - a.average_cost));
     }
   }, [value, tourist]);
-
+  if (loading) {
+    return <h1>loading............</h1>;
+  }
   return (
     <div className="container mx-auto px-4 rounded-lg py-5">
       <div className="bg-[url('https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg')] h-[300px] w-full flex justify-center items-center relative rounded-lg">

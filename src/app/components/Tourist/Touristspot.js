@@ -3,16 +3,21 @@ import SingleTouristCard from "./SingleTouristCard";
 import { Fade } from "react-awesome-reveal";
 const Touristspot = () => {
   const [tourist, setTourist] = useState();
+  const [loading, setloading] = useState(false);
   useEffect(() => {
+    setloading(true);
     const fetchdata = async () => {
-      const res = await fetch("./tourist.json");
+      const res = await fetch("http://localhost:5000/travels");
       const data = await res.json();
       setTourist(data);
-      console.log(data);
+      setloading(false);
     };
     fetchdata();
   }, []);
 
+  if (loading) {
+    return <h1>loading..........</h1>;
+  }
   return (
     <div className="py-10 container mx-auto px-4">
       <h1 className="text-4xl font-extrabold text-center capitalize dark:text-white">
