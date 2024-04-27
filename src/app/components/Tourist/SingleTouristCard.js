@@ -3,12 +3,13 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 import { FaUsers, FaHeart, FaStar } from "react-icons/fa";
 import { TiWeatherPartlySunny } from "react-icons/ti";
+import { Link } from "react-router-dom";
 const SingleTouristCard = ({ tourist }) => {
   const {
+    _id,
     average_cost,
     location,
     country_name,
-    image_url,
     rating,
     reviews_number,
     total_visitors_per_year,
@@ -16,6 +17,7 @@ const SingleTouristCard = ({ tourist }) => {
     tourists_spot_name,
     seasonality,
   } = tourist;
+
   return (
     <div className="rounded-lg bg-gray-100">
       <div className="overflow-hidden h-[250px] w-full rounded-t-lg relative">
@@ -69,10 +71,11 @@ const SingleTouristCard = ({ tourist }) => {
             </p>
           </div>
         </div>
-
-        <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55] w-full text-center">
-          View details
-        </button>
+        <Link to={`/tourist/${_id}`}>
+          <button className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55] w-full text-center">
+            View details
+          </button>
+        </Link>
       </div>
     </div>
   );

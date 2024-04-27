@@ -9,21 +9,21 @@ const AddTourist = () => {
     const name = form.name.value;
     const email = form.email.value;
     const seasonality = form.seasonality.value;
-    const coutry_name = form.coutry_name.value;
+    const country_name = form.coutry_name.value;
     const total_visitors_per_year = form.total_visit.value;
     const travel_time = form.time.value;
     const average_cost = form.avarge_cost.value;
     const short_description = form.description.value;
     const location = form.location.value;
     const tourists_spot_name = form.spot_name.value;
-    const review = form.review.value;
+    const reviews_number = form.review.value;
     const rating = form.rating.value;
     const image_url = form.Photo_url.value;
 
     const Touristinfo = {
       name,
       seasonality,
-      coutry_name,
+      country_name,
       email,
       total_visitors_per_year,
       travel_time,
@@ -32,7 +32,7 @@ const AddTourist = () => {
       location,
       tourists_spot_name,
       image_url,
-      review,
+      reviews_number,
       rating,
     };
 

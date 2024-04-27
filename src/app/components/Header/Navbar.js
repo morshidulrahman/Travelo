@@ -65,7 +65,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full border-b dark:bg-gray-900 dark:text-white bg-white dark:border-b-gray-700">
+    <nav className="w-full border-b dark:bg-gray-900 dark:text-white bg-white dark:border-b-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-5">
           <div className="flex space-x-2">

@@ -7,6 +7,7 @@ import AddTourist from "../pages/AddTourist";
 import AllTourist from "../pages/AllTourist";
 import MyList from "../pages/MyList";
 import PrivateRoute from "./PrivateRoute";
+import TouristDetails from "../pages/TouristDetails";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddTourist />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/tourist/:id",
+        element: (
+          <PrivateRoute>
+            <TouristDetails />
           </PrivateRoute>
         ),
       },

@@ -31,8 +31,8 @@ const AllTourist = () => {
   }
 
   return (
-    <div className="   py-5">
-      <div className="bg-[url('https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg')] h-[300px] w-full flex justify-center items-center relative ">
+    <div className="">
+      <div className="bg-[url('https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg')] h-[350px] w-full flex justify-center items-center relative ">
         <h1 className="text-center text-white font-extrabold text-4xl">
           All Tourists spot
         </h1>
