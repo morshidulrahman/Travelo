@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { FaEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
+
 import { UserAuth } from "../context/AuthProvider";
+
+import MylistCard from "../components/mylist/MylistCard";
 
 const MyList = () => {
   const { user } = useContext(UserAuth);
@@ -47,36 +47,7 @@ const MyList = () => {
             </thead>
             <tbody>
               {mylist.map((item) => (
-                <tr
-                  key={item._id}
-                  className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-                >
-                  <th
-                    scope="row"
-                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                  >
-                    {item.tourists_spot_name}
-                  </th>
-                  <td className="px-6 py-4">{item.travel_time} days</td>
-                  <td className="px-6 py-4">{item.seasonality}</td>
-                  <td className="px-6 py-4">${item.average_cost}</td>
-                  <td className="px-6 py-4 flex gap-2">
-                    <Link
-                      to="/"
-                      className="font-medium bg-orange-600 text-white rounded-md
-                    px-3 py-2"
-                    >
-                      <FaEdit size={20} />
-                    </Link>
-                    <Link
-                      to="/"
-                      className="font-medium bg-red-600 text-white rounded-md
-                    px-3 py-2"
-                    >
-                      <MdDelete size={20} />
-                    </Link>
-                  </td>
-                </tr>
+                <MylistCard item={item} mylist={mylist} setmylist={setmylist} />
               ))}
             </tbody>
           </table>
