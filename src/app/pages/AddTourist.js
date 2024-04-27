@@ -100,6 +100,7 @@ const AddTourist = () => {
                   name="seasonality"
                   required
                 >
+                  <option>Select your Season</option>
                   <option value="Summer">Summer</option>
                   <option value="Winter">Winter</option>
                 </select>
@@ -157,8 +158,8 @@ const AddTourist = () => {
                   name="coutry_name"
                   required
                 >
+                  <option>Select your Country</option>
                   <option value="Bangladesh">Bangladesh</option>
-                  <option value="Thailand">Thailand</option>
                   <option value="Thailand">Thailand</option>
                   <option value="Indonesia">Indonesia</option>
                   <option value="Malaysia">Malaysia</option>
