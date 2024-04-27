@@ -5,6 +5,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { MdAttachMoney } from "react-icons/md";
 import CourtryCard from "../components/countries/CourtryCard";
+import Loader from "../components/loader/Loader";
 
 const AllCourty = () => {
   const [country, setcountry] = useState();
@@ -21,6 +22,9 @@ const AllCourty = () => {
     };
     fetchdata();
   }, []);
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <>
       <div className="bg-[url('https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg')] h-[350px] w-full flex justify-center items-center relative ">
