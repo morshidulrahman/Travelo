@@ -4,9 +4,10 @@ const Footer = () => {
   return (
     <div className="footer_image">
       <div className="container mx-auto px-4">
-        <div className="flex gap-10 py-20 justify-between w-full lg:flex-row flex-col ">
+        <div className="flex gap-10 pt-20 pb-10 justify-between w-full lg:flex-row flex-col ">
           <h2 className="text-5xl font-extrabold text-white w-[90%] lg:w-[60%] leading-[60px]">
-            Travel beyond your imagination, with our Travel Agency!
+            <span className="text-[#F26f55]"> Travelo</span> beyond your
+            imagination, with our Travel Agency!
           </h2>
           <div className="w-full lg:w-1/3">
             <h1 className="font-bold text-white text-3xl pb-5 mt-1">Adress</h1>
@@ -32,6 +33,14 @@ const Footer = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center items-center py-5">
+          <p
+            className="
+            text-white text-center"
+          >
+            © 2024 Morshidul. All rights reserved
+          </p>
         </div>
       </div>
     </div>
