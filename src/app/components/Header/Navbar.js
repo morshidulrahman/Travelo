@@ -7,7 +7,7 @@ import { BiSun } from "react-icons/bi";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { UserAuth } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
-
+import { Tooltip } from "react-tooltip";
 function Navbar() {
   const [toggle, settoggle] = useState(false);
 
@@ -117,12 +117,19 @@ function Navbar() {
                 </div>
               ) : (
                 <div className="flex gap-4 items-center">
+                  <Tooltip
+                    className="z-50 dark:bg-white dark:text-gray-800"
+                    id="my-tooltip"
+                    place="top"
+                    content={user?.displayName}
+                  />
                   <img
                     data-tooltip-id="my-tooltip"
                     src={user?.photoURL}
                     alt="me"
                     className="h-10 w-10 rounded-full p-1 bg-black"
                   />
+
                   <button
                     onClick={handleLogout}
                     className="bg-[#F26f55] text-white px-4 py-2 rounded-md hover:bg-transparent hover:text-[#F26f55] duration-300 transition-all border border-[#F26f55] "

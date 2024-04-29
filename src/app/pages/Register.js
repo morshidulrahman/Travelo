@@ -6,6 +6,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { UserAuth } from "../context/AuthProvider";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Helmets from "../utils/Helmet";
 
 const Register = () => {
   const [visable, setvisable] = useState(false);
@@ -51,6 +52,7 @@ const Register = () => {
 
   return (
     <div className="dark:bg-gray-900">
+      <Helmets text="| Register" />
       <div className="flex items-center justify-center py-10">
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-100">
           <h1 className="text-2xl font-bold text-center">Register</h1>

@@ -4,6 +4,7 @@ import { UserAuth } from "../context/AuthProvider";
 
 import MylistCard from "../components/mylist/MylistCard";
 import Loader from "../components/loader/Loader";
+import Helmets from "../utils/Helmet";
 
 const MyList = () => {
   const { user } = useContext(UserAuth);
@@ -25,6 +26,7 @@ const MyList = () => {
 
   return (
     <div>
+      <Helmets text="| MyList" />
       <h1 className="text-3xl font-extrabold capitalize text-center py-5 dark:text-white">
         my list
       </h1>

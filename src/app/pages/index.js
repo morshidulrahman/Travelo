@@ -1,0 +1,9 @@
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as AddTourist } from "./AddTourist";
+export { default as AllCourty } from "./AllCourty";
+export { default as AllTourist } from "./AllTourist";
+export { default as MyList } from "./MyList";
+export { default as TouristDetails } from "./TouristDetails";
+export { default as UpdateTourists } from "./UpdateTourists";
+export { default as Home } from "./Home";

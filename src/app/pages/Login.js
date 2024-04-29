@@ -6,6 +6,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { UserAuth } from "../context/AuthProvider";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
+import Helmets from "../utils/Helmet";
 
 const Login = () => {
   const [visable, setvisable] = useState(false);
@@ -44,6 +45,7 @@ const Login = () => {
 
   return (
     <div className="dark:bg-gray-900">
+      <Helmets text="| Login" />
       <div className="flex items-center justify-center py-10 ">
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-100  ">
           <h1 className="text-2xl font-bold text-center">Login</h1>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SingleTouristCard from "../components/Tourist/SingleTouristCard";
 import { Fade } from "react-awesome-reveal";
 import Loader from "../components/loader/Loader";
+import Helmets from "../utils/Helmet";
 
 const AllTourist = () => {
   const [tourist, setTourist] = useState([]);
@@ -33,6 +34,7 @@ const AllTourist = () => {
 
   return (
     <div className="">
+      <Helmets text="| Tourist" />
       <div className="bg-[url('https://i.ibb.co/ZNXqPQs/photo-1534269222346-5a896154c41d.jpg')] h-[350px] w-full flex justify-center items-center relative ">
         <h1 className="text-center text-white font-extrabold text-4xl">
           All Tourists spot

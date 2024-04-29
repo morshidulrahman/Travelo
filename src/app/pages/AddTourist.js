@@ -1,5 +1,6 @@
 import React from "react";
 import toast from "react-hot-toast";
+import Helmets from "../utils/Helmet";
 
 const AddTourist = () => {
   const handleSubmit = (e) => {
@@ -54,6 +55,7 @@ const AddTourist = () => {
 
   return (
     <div className="flex justify-center items-center py-16">
+      <Helmets text="| Add" />
       <div className="md:w-[70%] lg:w-[60%] w-[90%] rounded-md bg-gray-200 p-8">
         <h1 className="text-xl font-bold text-center py-5">
           Add Tourists spot
