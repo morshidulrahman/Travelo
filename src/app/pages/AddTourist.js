@@ -37,7 +37,7 @@ const AddTourist = () => {
       rating,
     };
 
-    fetch("http://localhost:5000/travels", {
+    fetch("https://travel-server-umber.vercel.app/travels", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -56,7 +56,7 @@ const AddTourist = () => {
   return (
     <div className="flex justify-center items-center py-16">
       <Helmets text="| Add" />
-      <div className="md:w-[70%] lg:w-[60%] w-[90%] rounded-md bg-gray-200 p-8">
+      <div className="md:w-[70%] lg:w-[60%] w-[80%] rounded-md bg-gray-200 p-8">
         <h1 className="text-xl font-bold text-center py-5">
           Add Tourists spot
         </h1>

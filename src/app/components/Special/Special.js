@@ -3,7 +3,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Special = () => {
   return (
-    <div className="py-10 container mx-auto px-4">
+    <div className="py-10 container mx-auto px-5">
       <h1 className="text-4xl font-extrabold text-center capitalize dark:text-white">
         Special Offers
       </h1>
@@ -30,7 +30,7 @@ const Special = () => {
         </div>
 
         <div className="h-[400px] rounded-md bg-[url('https://i.ibb.co/QXTvJZ7/banner4.jpg')] p-10">
-          <h1 className="text-white font-extrabold text-5xl capitalize w-[60%] lg:w-[40%] leading-[50px]">
+          <h1 className="text-white font-extrabold text-5xl capitalize w-[70%] lg:w-[40%] leading-[50px]">
             Near By Hotel{" "}
           </h1>
           <p className="py-5 text-white font-semibold text-xl w-[60%] lg:w-[40%]">

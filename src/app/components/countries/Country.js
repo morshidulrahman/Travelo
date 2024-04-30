@@ -10,7 +10,9 @@ const Country = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/mycountry`);
+      const res = await fetch(
+        `https://travel-server-umber.vercel.app/mycountry`
+      );
       const data = await res.json();
       setcountry(data);
       setloading(false);

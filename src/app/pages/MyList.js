@@ -9,10 +9,12 @@ import Helmets from "../utils/Helmet";
 const MyList = () => {
   const { user } = useContext(UserAuth);
   const [mylist, setmylist] = useState([]);
-  const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(true);
   useEffect(() => {
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/mylist/${user.email}`);
+      const res = await fetch(
+        `https://travel-server-umber.vercel.app/mylist/${user.email}`
+      );
       const data = await res.json();
       setmylist(data);
       setloading(false);
@@ -31,13 +33,16 @@ const MyList = () => {
         my list
       </h1>
 
-      <div className="container mx-auto px-4 py-10">
+      <div className="container mx-auto px-5 py-10">
         {mylist.length == 0 ? (
-          <h1 className="text-lg font-bold text-center py-10">
+          <h1 className="text-xl font-bold text-center py-10 dark:text-white capitalize">
             No tourists spot added
           </h1>
         ) : (
-          <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <div
+            className="relative overflow-x-auto shadow-md sm:rounded-lg  
+          "
+          >
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
@@ -59,7 +64,7 @@ const MyList = () => {
                 </tr>
               </thead>
               <tbody>
-                {mylist.map((item) => (
+                {mylist?.map((item) => (
                   <MylistCard
                     item={item}
                     mylist={mylist}

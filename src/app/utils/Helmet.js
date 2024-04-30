@@ -7,7 +7,6 @@ const Helmets = ({ text }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Travelo {text}</title>
-        <link rel="canonical" href="https://i.ibb.co/3cXqr9P/profile1.png" />
       </Helmet>
     </>
   );

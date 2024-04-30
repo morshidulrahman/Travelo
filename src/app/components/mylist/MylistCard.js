@@ -16,7 +16,7 @@ const MylistCard = ({ item, setmylist, mylist }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/travels/${item._id}`, {
+        fetch(`https://travel-server-umber.vercel.app/travels/${item._id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

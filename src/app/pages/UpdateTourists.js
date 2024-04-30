@@ -11,7 +11,9 @@ const UpdateTourists = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/travels/${id}`);
+      const res = await fetch(
+        `https://travel-server-umber.vercel.app/travels/${id}`
+      );
       const data = await res.json();
       setdata(data);
       setloading(false);
@@ -56,7 +58,7 @@ const UpdateTourists = () => {
       image_url,
     };
 
-    fetch(`http://localhost:5000/travels/${id}`, {
+    fetch(`https://travel-server-umber.vercel.app/travels/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -83,7 +85,7 @@ const UpdateTourists = () => {
 
   return (
     <div className="flex justify-center items-center py-16">
-      <div className="md:w-[70%] lg:w-[60%] w-[90%] rounded-md bg-gray-200 p-8">
+      <div className="md:w-[70%] lg:w-[60%] w-[80%] rounded-md bg-gray-200 p-8">
         <h1 className="text-xl font-bold text-center py-5">
           Update Tourists spot
         </h1>

@@ -54,7 +54,7 @@ const Register = () => {
     <div className="dark:bg-gray-900">
       <Helmets text="| Register" />
       <div className="flex items-center justify-center py-10">
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-100">
+        <div className="w-[85%] md:w-[30%] p-8 space-y-3 rounded-xl bg-gray-100">
           <h1 className="text-2xl font-bold text-center">Register</h1>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-1 text-sm">

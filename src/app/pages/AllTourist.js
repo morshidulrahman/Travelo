@@ -12,7 +12,7 @@ const AllTourist = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch("http://localhost:5000/travels");
+      const res = await fetch("https://travel-server-umber.vercel.app/travels");
       const data = await res.json();
       setTourist(data);
       setloading(false);
@@ -43,15 +43,15 @@ const AllTourist = () => {
       </div>
       <div className="flex justify-center items-center py-14">
         <select
-          className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 text-base font-semibold"
+          className="bg-gray-50 border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 text-base font-semibold outline-none"
           onChange={(e) => setvalue(e.target.value)}
         >
           <option value="ascending">ascending </option>
           <option value="descending">descending </option>
         </select>
       </div>
-      <div className=" container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1">
+      <div className=" container mx-auto px-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1 pb-10">
           {tourist &&
             tourist.map((tourist, ind) => (
               <Fade

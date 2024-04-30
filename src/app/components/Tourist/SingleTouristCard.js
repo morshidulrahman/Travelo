@@ -68,7 +68,8 @@ const SingleTouristCard = ({ tourist }) => {
           <div className="flex gap-2 lg:w-1/2 md:w-[70%]">
             <FaStar size={20} className="text-yellow-500" />
             <p>
-              {rating} ({reviews_number} reviews)
+              {rating} (
+              <span className="text-sm">{reviews_number} reviews</span>)
             </p>
           </div>
         </div>

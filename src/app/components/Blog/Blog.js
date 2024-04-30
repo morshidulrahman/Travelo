@@ -9,7 +9,7 @@ const Blog = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/blogs`);
+      const res = await fetch(`https://travel-server-umber.vercel.app/blogs`);
       const data = await res.json();
       setblog(data);
       setloading(false);
@@ -22,7 +22,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-5">
       <h1 className="text-4xl font-extrabold text-center capitalize dark:text-white">
         Blogs
       </h1>

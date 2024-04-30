@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/Layout";
+import ErrorPage from "../components/Error/ErrorPage";
+
 import {
   AddTourist,
   AllCourty,
@@ -17,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

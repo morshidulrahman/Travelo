@@ -15,7 +15,9 @@ const AllCourty = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/mycountry/${name}`);
+      const res = await fetch(
+        `https://travel-server-umber.vercel.app/mycountry/${name}`
+      );
       const data = await res.json();
       setcountry(data);
       setloading(false);
@@ -33,7 +35,7 @@ const AllCourty = () => {
         </h1>
         <div className="bg-black w-full absolute top-0 left-0 h-full opacity-20"></div>
       </div>
-      <div className=" container mx-auto px-4 py-10">
+      <div className=" container mx-auto px-5 py-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1">
           {country &&
             country.map((tourist, ind) => (

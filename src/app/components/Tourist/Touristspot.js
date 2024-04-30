@@ -8,7 +8,7 @@ const Touristspot = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch("http://localhost:5000/travels");
+      const res = await fetch("https://travel-server-umber.vercel.app/travels");
       const data = await res.json();
       setTourist(data);
       setloading(false);
@@ -20,7 +20,7 @@ const Touristspot = () => {
     return <Loader />;
   }
   return (
-    <div className="py-10 container mx-auto px-4">
+    <div className="py-10 container mx-auto px-5">
       <h1 className="text-4xl font-extrabold text-center capitalize dark:text-white">
         Tourist spots
       </h1>

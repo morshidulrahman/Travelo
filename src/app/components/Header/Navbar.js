@@ -66,7 +66,7 @@ function Navbar() {
 
   return (
     <nav className="w-full border-b dark:bg-gray-900 dark:text-white bg-white dark:border-b-gray-800">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-5">
         <div className="flex justify-between items-center py-5">
           <div className="flex space-x-2">
             <Link className="text-3xl font-bold font-heading" to="/">
@@ -144,7 +144,7 @@ function Navbar() {
               className="lg:hidden block dark:text-white"
               onClick={() => settoggle(true)}
             >
-              <AiOutlineMenu size={22} />
+              <AiOutlineMenu size={28} />
             </span>
           </div>
         </div>

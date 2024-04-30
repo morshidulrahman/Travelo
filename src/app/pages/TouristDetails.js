@@ -12,7 +12,9 @@ const TouristDetails = () => {
   useEffect(() => {
     setloading(true);
     const fetchdata = async () => {
-      const res = await fetch(`http://localhost:5000/travels/${id}`);
+      const res = await fetch(
+        `https://travel-server-umber.vercel.app/travels/${id}`
+      );
       const data = await res.json();
       setTourist(data);
       setloading(false);
@@ -49,7 +51,7 @@ const TouristDetails = () => {
         <div className="bg-black w-full absolute top-0 left-0 h-full opacity-20"></div>
       </div>
       <div className="flex gap-6 py-16 container mx-auto px-4 justify-between lg:flex-row flex-col">
-        <div className="w-full lg:w-[48%] h-[400px]">
+        <div className="w-full lg:w-[48%] h-[300px] md:h-[400px]">
           <img
             src={image_url}
             alt={tourists_spot_name}
