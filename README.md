@@ -2,9 +2,25 @@
 
 # https://travelo-morshidul.netlify.app/
 
-# Project Description
+# To Run Local
 
-- You have to use yarn run this project
+```bash
+# Clone this project
+$ git clone https://github.com/morshidulrahman/Travelo.git
+
+# Access
+$ cd Travelo
+
+# Install dependencies
+$ yarn
+
+# Run the project
+$ yarn dev
+
+# The server will initialize in the <http://localhost:3000>
+```
+
+# Project Description
 
 - see tourist sport in home page when click any card this go on differect route details page
 
